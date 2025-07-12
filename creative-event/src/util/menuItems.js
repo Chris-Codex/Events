@@ -1,0 +1,1 @@
+export const menuItems = ['Events', 'About', 'Contact', 'Policy'];
