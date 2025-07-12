@@ -12,12 +12,12 @@ const NavDropdown = () => {
         {navToggle && 
             <div className='h-59 shadow-md sm:hidden'>
                 <ul className='px-6 pt-3 sm:hidden flex flex-col gap-3'>
-                    {menuItems.map((item, index) => {
+                    {menuItems.map((item) => {
                         return (
-                            <li key={index}
-                            className={`cursor-pointer px-3 ${activeIndex === index ? "bg-[#eddbfa] p-2 rounded-md" : "bg-[#f5f2f7] p-2 rounded-md"}`}
-                                onClick={() => setActiveIndex(index)}>
-                                {item}
+                            <li key={item.id}
+                                className={`cursor-pointer px-3 ${activeIndex === item.id ? "bg-[#eddbfa] p-2 rounded-md" : "bg-[#f5f2f7] p-2 rounded-md"}`}
+                                onClick={() => setActiveIndex(item.id)}>
+                                {item.value}
                             </li>
                         )
                     })}
