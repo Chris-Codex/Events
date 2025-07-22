@@ -4,6 +4,7 @@ import NavDropdown from '../components/NavDropdown'
 import { cardMenuItems, subMenuicons, events } from '../util/menuItems'
 import EventsInfoModal from '../components/EventsInfoModal'
 import EventsCard from '../components/EventsCard'
+import Footer from '../components/Footer'
 
 
 
@@ -30,7 +31,7 @@ const Home = () => {
             
             <main className='px-5 sm:px-20'>
                 <section>
-                    <h1 className='text-[#7B61FF] text-[23px] font-bold text-center pt-10  sm:text-[38px]'>Creative Events & Workshops</h1>
+                    <h1 className='text-[#06c168] text-[23px] font-bold text-center pt-10  sm:text-[38px]'>Creative Events & Workshops</h1>
                     <div className='grid sm:flex justify-between items-center mt-10 sm:mt-5'>
                         <div className=''>
                             <ul className='flex gap-3 sm:gap-6'>
@@ -39,8 +40,8 @@ const Home = () => {
                                         <li key={item.id}
                                             onClick={() => setActiveIndex(item.id)}
                                             className={`cursor-pointer ${activeIndex === item.id ? 
-                                                "flex items-center bg-purple-600 text-[#fff] pt-2 pb-2 px-1 rounded-[100px] sm:bg-purple-600 text-[#fff] px-3 rounded-[100px]" : 
-                                                "bg-gray-200 text-[#000] pt-2 pb-2 px-3 rounded-[100px]"}`}
+                                                "flex items-center bg-[#06c168] text-[#fff] pt-2 pb-2 px-1 rounded-[100px] sm:bg-[#06c168] text-[#fff] px-3 rounded-[100px]" : 
+                                                "bg-gray-100 text-[#000] pt-2 pb-2 px-3 rounded-[100px] hover:bg-gray-200"}`}
                                         >
                                             {item.value}
                                         </li>
@@ -53,7 +54,7 @@ const Home = () => {
                                 const Iconcomponent = icon.icon;
                                 return (
                                     <div 
-                                        className={`flex items-center gap-1 cursor-pointer ${activeIndex_ === index ? "bg-purple-600 text-[#fff] pt-2 pb-2 px-5 rounded-[10px]" : "bg-gray-200 text-[#000] pt-2 pb-2 px-5 rounded-[10px]"}`}
+                                        className={`flex items-center gap-1 cursor-pointer ${activeIndex_ === index ? "bg-[#06c168] text-[#fff] pt-2 pb-2 px-5 rounded-[10px]" : "bg-gray-100 text-[#000] pt-2 pb-2 px-5 rounded-[10px] hover:bg-gray-200"}`}
                                         key={index}
                                         onClick={() => setActiveIndex_(index)}
                                     >
@@ -99,6 +100,7 @@ const Home = () => {
         </section>
 
         <EventsCard items={events} />
+        <Footer />
     </main>
   )
 }

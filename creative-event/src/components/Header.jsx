@@ -11,14 +11,14 @@ const Header = () => {
 
   return (
     <header className='flex justify-between items-center px-5 sm:px-20 w-full h-16 shadow-sm'>
-        <h1 className='text-[#7B61FF] text-2xl font-bold'>CreativeEvents</h1>
+        <h1 className='bg-gradient-to-r from-gray-600 to-[#06c168] bg-clip-text text-transparent text-2xl font-bold'>CreativeEvents</h1>
         <nav className='hidden lg:block'>
             <ul className='flex gap-7 items-center'>
               {menuItems.map((item) => {
                 return (
                   <li key={item.id}
                       onClick={() => setActiveIndex(item.id)}
-                      className={`cursor-pointer ${activeIndex === item.id ? "text-purple-600" : ""}`}
+                      className={`cursor-pointer ${activeIndex === item.id ? "text-[#06c168]" : ""}`}
                   >
                     {item.value}
                   </li>
