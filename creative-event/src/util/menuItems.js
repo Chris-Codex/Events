@@ -35,7 +35,7 @@ import feature_5 from "../assets/images/ft-4.jpg"
 export const events = [
     {
       id: 0,
-      name: "Creative Typography Workshop",
+      name: "Typography Workshop",
       image: feature_0,
       sub_title: "Digital Arts Studio, Room 302",
       time: "10:00 AM - 12:00 PM",
@@ -55,7 +55,7 @@ export const events = [
     },
     {
       id: 2,
-      name: "UX Design Principles Workshop",
+      name: "UX Design Workshop",
       image: feature_2,
       sub_title: "Tech Hub, Conference Room B",
       time: "Nov 25, 3:30 PM",

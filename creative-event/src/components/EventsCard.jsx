@@ -1,23 +1,46 @@
 import React, { useState } from 'react'
 import { events } from '../util/menuItems'
 import MainEventsModal from './MainEventsModal'
+import { useEvent } from '../context/EventContext'
+import { GoSearch } from 'react-icons/go'
 
 
 const EventsCard = () => {
     const [active, setActive] = useState(null)
     const [modals, setModals] = useState(false);
+    const [search, setSearch] = useState("")
+
+    const { category } = useEvent()
 
     const handleModal = (index) => {
         setActive(index)
         setModals((prev) => !prev)
     }
 
-    console.log(active)
+    const handleChange = (e) => {
+        setSearch(e.target.value)
+    }
+
+
+    const filterMatch = events.filter((items) => {
+        const categoryMatch = !category || category === "All" || items.category === category;
+
+        const searchMatch = !search || items.name.includes(search);
+
+        return categoryMatch && searchMatch;
+    })
+    
 
   return (
     <>
-        <section className='relative grid grid-cols-1 px-6 sm:px-20 md:grid-cols-2 lg:grid-cols-3 w-full mt-15 mb-15 gap-4 '>
-            {events.map((item, index) => {
+        <div className="flex w-full px-2  h-10 mt-10 mb-10">
+            <form  className='flex w-full justify-center items-center'>
+                <input text="text" name="search" value={search} 
+                    onChange={handleChange} placeholder='Search Events' className='relative w-full max-w-[700px] rounded-[10px] px-4 h-12 border border-gray-200 outline-[#06c168]' />
+            </form> 
+        </div>
+        <section className='relative grid grid-cols-1 px-6 sm:px-20 md:grid-cols-2 lg:grid-cols-3 w-full mt-2 mb-15 gap-4 '>
+            {filterMatch.map((item, index) => {
                 return (
                     <div className='relative cursor-pointer w-full rounded-md shadow-lg' key={item.id} onClick={() => handleModal(index)}>
                         <div className='absolute flex justify-center items-center rounded-[100px] inset-0 z-90 m-6 text-[#fff] bg-[#06c168] to-green-700 w-30 h-8 font-[600]'>

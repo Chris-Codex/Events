@@ -6,7 +6,7 @@ const MainEventsModal = ({ modal, setModal, items}) => {
   return (
     <>
       {modal && (
-        <div className='fixed inset-0 z-90 flex justify-center items-center rounded-md'>
+        <div className='fixed inset-0 bg-black/60 z-[999] flex justify-center items-center rounded-md'>
           <div className='flex justify-between w-full max-w-[1110px] h-140 shadow-md bg-[#fff]'>
                 <div className='relative w-full rounded-tl-md rounded-bl-md bg-cover bg-center  bg-no-repeat' style={{ backgroundImage: `url(${items ? items.image : ""})`}}>
                   <div className='absolute flex justify-center items-center rounded-[100px] inset-0 z-90 m-6 text-[#fff] bg-gradient-to-r from-gray-50 via-[#06c168] to-green-700 w-30 h-8 font-[600]'>

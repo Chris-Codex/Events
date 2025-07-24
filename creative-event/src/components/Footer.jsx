@@ -17,9 +17,9 @@ const Footer = () => {
         <div className=''>
             <p className='text-[20px] font-[600]'>Quick Links</p>
             <ul className='pt-5'>
-                {menuItems.map((items) => {
+                {menuItems.map((items, index) => {
                     return (
-                        <li className='cursor-pointer pb-5 text-gray-400 hover:text-[#fff]'>{items.value}</li>
+                        <li key={index} className='cursor-pointer pb-5 text-gray-400 hover:text-[#fff]'>{items.value}</li>
                     )
                 })}
             </ul>
@@ -44,7 +44,7 @@ const Footer = () => {
             <p className='pt-5 text-gray-400'>Subscribe to get updates on upcoming events</p>
             <div className='flex w-full h-10 rounded-[8px] mt-3 bg-[#fff]'>
                 <input text="text" className='text-[#333] px-2 outline-none' placeholder='Your email' />
-                <button className='w-full rounded-tr-[8px] rounded-br-[8px] text-[#fff]  bg-[#06c168] text-[#000]'>Subscribe</button>
+                <button className='w-full rounded-tr-[8px] rounded-br-[8px] text-[#fff]  bg-[#06c168] text-[#000] font-[600]'>Subscribe</button>
             </div>
         </div>
     </section>

@@ -9,7 +9,7 @@ const EventsInfoModal = ({ modal, setModal, items}) => {
   return (
     <>
         {modal && 
-            <div className='fixed inset-0 z-[999]  flex items-center justify-center bg-opacity-1'>
+            <div className='fixed inset-0 bg-black/60 z-[999]  flex items-center justify-center bg-opacity-1'>
                 <div className='z-50 bg-white w-full max-w-[1110px] h-90 rounded-md  shadow-md flex justify-between'>
                     <div className='relative w-full max-w-[50%] rounded-md bg-cover bg-center' style={{ backgroundImage: `url(${items.image})`}}>
                         <div className='flex justify-center items-center text-[#fff] font-[600] m-5 bg-gradient-to-r from-gray-200 to-[#06C168] w-30 h-8 rounded-[100px]'>
