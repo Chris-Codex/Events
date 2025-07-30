@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { IoMoonOutline, RxHamburgerMenu } from '../assets/icons/icons'
 import { useEvent } from '../context/EventContext'
 import { menuItems } from '../util/menuItems'
+import { Link } from 'react-router-dom'
 
 
 
@@ -16,12 +17,14 @@ const Header = () => {
             <ul className='flex gap-7 items-center'>
               {menuItems.map((item) => {
                 return (
-                  <li key={item.id}
+                  <Link to={`/${item.type}`} key={item.id}>
+                    <li key={item.id}
                       onClick={() => setActiveIndex(item.id)}
                       className={`cursor-pointer ${activeIndex === item.id ? "text-[#06c168]" : ""}`}
-                  >
-                    {item.value}
-                  </li>
+                    >
+                      {item.value}
+                    </li>
+                  </Link>
                 )
               })}
               <IoMoonOutline size={20} />

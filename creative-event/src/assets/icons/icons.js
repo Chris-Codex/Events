@@ -4,8 +4,10 @@ import { IoLocationOutline } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import { GoSearch } from "react-icons/go";
+import { BsLightningCharge } from "react-icons/bs";
+import { GoLock } from "react-icons/go";
 
 
 export { IoMoonOutline, RxHamburgerMenu, IoLocationOutline, FaPhoneAlt, MdOutlineMail,
-    GoSearch
+    GoSearch, BsLightningCharge, GoLock
   }

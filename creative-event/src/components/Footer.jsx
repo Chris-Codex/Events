@@ -9,7 +9,7 @@ import { MdOutlineMail } from 'react-icons/md'
 
 const Footer = () => {
   return (
-    <section className='w-full bg-gray-900 h-90 grid grid-cols-4 gap-10 text-[#fff] p-20'>
+    <section className='grid grid-cols- 1 px-6 py-10 h-auto gap-5 w-full bg-gray-900 sm:h-90 sm:grid sm:grid-cols-4 md:grid-cols-3 md:h-auto sm:gap-10 text-[#fff] sm:p-20'>
         <div className=''>
             <p className='text-[#06c168] text-[20px] font-[600]'>CreativeEvents</p>
             <p className='pt-5 text-gray-400'>Bringing creative minds together through workshops, exhibitions, and masterclasses.</p>
@@ -44,7 +44,7 @@ const Footer = () => {
             <p className='pt-5 text-gray-400'>Subscribe to get updates on upcoming events</p>
             <div className='flex w-full h-10 rounded-[8px] mt-3 bg-[#fff]'>
                 <input text="text" className='text-[#333] px-2 outline-none' placeholder='Your email' />
-                <button className='w-full rounded-tr-[8px] rounded-br-[8px] text-[#fff]  bg-[#06c168] text-[#000] font-[600]'>Subscribe</button>
+                <button className='w-full rounded-tr-[8px] rounded-br-[8px] text-[#fff]  bg-[#06c168] text-[#000] font-[600] md:px-4'>Subscribe</button>
             </div>
         </div>
     </section>
