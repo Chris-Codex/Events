@@ -14,3 +14,11 @@
   border-radius: 10px;
 }
 
+@media (min-width: 640px) and (max-width: 1023px) {
+  .tablet-px-20 {
+    padding-left: 5rem; /* 20 */
+    padding-right: 5rem;
+  }
+}
+
+

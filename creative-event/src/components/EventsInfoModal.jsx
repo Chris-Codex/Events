@@ -44,3 +44,5 @@ const EventsInfoModal = ({ modal, setModal, items}) => {
 }
 
 export default EventsInfoModal
+
+

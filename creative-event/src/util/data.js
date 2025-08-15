@@ -1,5 +1,5 @@
 export const menuItems = [
-    {id: 0, type: "events", value: "Events"},
+    {id: 0, type: "", value: "Events"},
     {id: 1, type: "about", value: "About"},
     {id: 2, type: "contact", value: "Contact"},
     {id: 3, type: "policy", value: "Policy"}
@@ -96,5 +96,102 @@ export const events = [
     },
    
   ];
+
+
+  //////////////////// Team //////////////////////////////
+  import user_1 from "../assets/images/user-1.jpg";
+  import user_2 from "../assets/images/user-2.jpg";
+  import user_3 from "../assets/images/user-3.jpg";
+  import user_4 from "../assets/images/user-4.jpg";
+  import { FaFacebookSquare } from "react-icons/fa";
+  import { FaSquareInstagram } from "react-icons/fa6";
+  import { FaLinkedin } from "react-icons/fa";  
+
+  export const teams = [
+    {
+      id: 1,
+      name: "Ben Ordega",
+      title: "Founder & CEO",
+      description: "Design strategist with 15 years experience in creative education",
+      image: user_1,
+      socials: [
+        {
+          icon: FaFacebookSquare,
+          link: "#"
+        },
+        {
+          icon: FaSquareInstagram,
+          link: "#"
+        },  
+        {
+          icon: FaLinkedin,
+          link: "#"
+        }
+      ]
+    },
+    {
+      id: 2,
+      name: "Alicia Bone",
+      title: "Creative Lead",
+      description: "Curator of immersive experiences and community builder",
+      image: user_2,
+      socials: [
+        {
+          icon: FaFacebookSquare,
+          link: "#"
+        },
+        {
+          icon: FaSquareInstagram,
+          link: "#"
+        },
+        {
+          icon: FaLinkedin,
+          link: "#"
+        }
+      ]
+    },
+    {
+      id: 3,
+      name: "Ben Bruce",
+      title: "Events Director",
+      description: "Multidisciplinary artist and workshop facilitator",
+      image: user_3,
+      socials: [
+        {
+          icon: FaFacebookSquare,
+          link: "#"
+        },
+        {
+          icon: FaSquareInstagram,
+          link: "#"
+        },
+        {
+          icon: FaLinkedin,
+          link: "#"
+        }
+      ]
+    },
+    {
+      id: 4,
+      name: "Kelly Mary",
+      title: "Tech Innovator",
+      description: "Bridges art and technology through interactive installations",
+      image: user_4,
+      socials: [
+        {
+          icon: FaFacebookSquare,
+          link: "#"
+        },
+        {
+          icon: FaSquareInstagram,
+          link: "#"
+        },
+        {
+          icon: FaLinkedin,
+          link: "#"
+        }
+      ]
+    }
+  ]
   
 

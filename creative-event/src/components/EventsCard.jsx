@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { events } from '../util/menuItems'
+import { events } from '../util/data'
 import MainEventsModal from './MainEventsModal'
 import { useEvent } from '../context/EventContext'
 import { GoSearch } from 'react-icons/go'
@@ -33,13 +33,13 @@ const EventsCard = () => {
 
   return (
     <>
-        <div className="flex w-full px-2  h-10 mt-10 mb-10">
-            <form  className='flex w-full  items-center'>
-                <div className=' mx-4 flex justify-between rounded-[100px]  items-center px-5 w-12/12 h-auto sm:mx-18 border border-gray-200'>
+        <div className="flex container mx-auto h-10 mt-10 mb-10 w-full">
+            <form  className=''>
+                <div className='mx-4 flex justify-between rounded-[100px] items-center px-5 w-full max-w-[347px] sm:w-max-[900px] md:w-max-[600px] lg:w-max-[900px] h-auto  border border-gray-200'>
                     <div className='flex items-center w-full'>
                         {search ? "" : <GoSearch />}
                         <input text="text" name="search" value={search} 
-                        onChange={handleChange} placeholder='Find Events' className='relative w-12/12 focus:outline-none rounded-[10px] px-4 h-12 outline-[#06c168]' />
+                        onChange={handleChange} placeholder='Find Events' className='relative w-full focus:outline-none rounded-[10px] px-4 h-12 outline-[#06c168]' />
                     </div>
 
                     <div className='bg-[#06c168] px-3 py-1 text-[#fff] font-[400] rounded-[100px]'>Search</div>
@@ -52,7 +52,7 @@ const EventsCard = () => {
                 No data available
             </div>
         )}
-        <section className='relative grid grid-cols-1 px-6 sm:px-20 md:grid-cols-2 md:gap-7 lg:grid-cols-3 w-full mt-2 mb-15 gap-4 '>
+        <section className='relative grid grid-cols-1 px-6 px-5 sm:flex-grow container mx-auto md:grid-cols-2 md:gap-7 lg:grid-cols-3 w-full mt-2 mb-15 gap-4 '>
             {filterMatch.map((item, index) => {
                 return (
                     <div className='relative cursor-pointer w-full rounded-md shadow-lg' key={item.id} onClick={() => handleModal(index)}>
@@ -71,10 +71,11 @@ const EventsCard = () => {
                         </div>
                     </div>
                 )
-            })} 
+            })}
         </section>
         
         {events && active !== null && <MainEventsModal items={events[active]} modal={modals} setModal={setModals} />}
+
     </>
   )
 }

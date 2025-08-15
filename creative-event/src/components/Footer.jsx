@@ -1,5 +1,5 @@
 import React from 'react'
-import { menuItems } from '../util/menuItems'
+import { menuItems } from '../util/data'
 import { IoLocationOutline } from 'react-icons/io5'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { MdOutlineMail } from 'react-icons/md'
@@ -9,12 +9,12 @@ import { MdOutlineMail } from 'react-icons/md'
 
 const Footer = () => {
   return (
-    <section className='grid grid-cols- 1 px-6 py-10 h-auto gap-5 w-full bg-gray-900 sm:h-90 sm:grid sm:grid-cols-4 md:grid-cols-3 md:h-auto sm:gap-10 text-[#fff] sm:p-20'>
+    <section className='grid grid-cols- 1 px-6 py-10 h-auto gap-5 w-full bg-gray-900 sm:h-90 sm:grid sm:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 md:h-auto sm:gap-10 text-[#fff] sm:p-20'>
         <div className=''>
             <p className='text-[#06c168] text-[20px] font-[600]'>CreativeEvents</p>
             <p className='pt-5 text-gray-400'>Bringing creative minds together through workshops, exhibitions, and masterclasses.</p>
         </div>
-        <div className=''>
+        <div className='sm:mx-auto'>
             <p className='text-[20px] font-[600]'>Quick Links</p>
             <ul className='pt-5'>
                 {menuItems.map((items, index) => {

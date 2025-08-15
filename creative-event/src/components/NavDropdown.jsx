@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useEvent } from '../context/EventContext'
-import { menuItems } from '../util/menuItems';
+import { menuItems } from '../util/data';
 
 const NavDropdown = () => {
     const [activeIndex, setActiveIndex] = useState(0);

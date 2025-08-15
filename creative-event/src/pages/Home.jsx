@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Header from '../components/Header'
 import NavDropdown from '../components/NavDropdown'
-import { cardMenuItems, subMenuicons, events } from '../util/menuItems'
+import { cardMenuItems, subMenuicons, events } from '../util/data'
 import EventsInfoModal from '../components/EventsInfoModal'
 import EventsCard from '../components/EventsCard'
 import Footer from '../components/Footer'
@@ -33,7 +33,7 @@ const Home = () => {
                 <Header />
                 <NavDropdown />
                 
-                <main className='px-5 sm:px-20'>
+                <main className='px-5 sm:flex-grow container mx-auto'>
                     <section>
                         <h1 className='text-[#06c168] text-[23px] font-bold text-center pt-10  sm:text-[38px]'>Creative Events & Workshops</h1>
                         <div className='grid sm:flex justify-between items-center mt-10 sm:mt-5'>
