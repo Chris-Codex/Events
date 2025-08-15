@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* global.css */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .tablet-px-20 {
+    padding-left: 5rem; /* 20 */
+    padding-right: 5rem;
+  }
+}
+
+
